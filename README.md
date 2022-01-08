@@ -12,7 +12,7 @@ createdb war-card-game
 
 npm install
 
-npm seed
+npm run seed
 (Seeding the database with players)
 
 npm run start:dev
