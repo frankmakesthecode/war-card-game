@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchPlayers } from '../store/players';
 import Game from './Game';
+import Leaderboard from './Leaderboard';
 
 export const Home = (props) => {
   const { loadPlayers } = props;
@@ -12,6 +13,7 @@ export const Home = (props) => {
 
   return (
     <div id="main-container">
+      <Leaderboard />
       <Game />
     </div>
   );

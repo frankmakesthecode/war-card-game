@@ -9,6 +9,7 @@ module.exports = router;
 router.get('/', async (req, res, next) => {
   try {
     const players = await Player.findAll({
+      order: [['wins', 'DESC']],
       attributes: ['id', 'name', 'wins'],
     });
 
