@@ -16,6 +16,7 @@ npm run seed
 (Seeding the database with players)
 
 npm run start:dev
+(http://localhost:8080/)
 ```
 
 ## Mechanics
