@@ -7,6 +7,7 @@ import Home from './components/Home';
 
 ReactDOM.render(
   <Provider store={store}>
+    <h1>War: The Card Game of Champions</h1>
     <Home />
   </Provider>,
   document.getElementById('app')

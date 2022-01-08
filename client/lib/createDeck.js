@@ -12,13 +12,13 @@ const createDeck = () => {
       card.alias = i.toString();
     }
 
-    card.suit = 'clubs';
+    card.suit = '♣️';
     deck.push({ ...card });
-    card.suit = 'spades';
+    card.suit = '♠️';
     deck.push({ ...card });
-    card.suit = 'hearts';
+    card.suit = '♥️';
     deck.push({ ...card });
-    card.suit = 'diamonds';
+    card.suit = '♦️';
     deck.push({ ...card });
   }
 

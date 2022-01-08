@@ -1,27 +1,18 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchPlayers } from '../store/players';
-import createDeck from '../lib/createDeck';
-import playWar from '../lib/playWar';
+import Game from './Game';
 
 export const Home = (props) => {
-  const { loadPlayers, players } = props;
+  const { loadPlayers } = props;
 
-  useEffect(() => {
-    loadPlayers();
-    playWar(createDeck(), players[0], players[1]);
+  useEffect(async () => {
+    await loadPlayers();
   }, []);
 
   return (
-    <div>
-      {players.map((player) => {
-        return (
-          <div key={player.id}>
-            <p>{player.name}</p>
-            <p>{player.wins}</p>
-          </div>
-        );
-      })}
+    <div id="main-container">
+      <Game />
     </div>
   );
 };
